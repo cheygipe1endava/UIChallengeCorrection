@@ -29,14 +29,6 @@ public class HomePage extends BasePage{
         this.webDriver = webDriver;
     }
 
-    /*
-    public void clickAndSendData(By by, String data){
-        WebElement element = webDriver.findElement(by);
-        element.click();
-        element.clear();
-        element.sendKeys(data);
-    }
-*/
     public void openLoginFormOverlay()
     {
         loginDiv.click();
