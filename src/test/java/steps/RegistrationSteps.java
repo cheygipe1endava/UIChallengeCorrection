@@ -1,5 +1,7 @@
 package steps;
 
+import cucumber.api.DataTable;
+import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -9,7 +11,9 @@ import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import pages.RegistrationPage;
 
-public class RegistrationSteps {
+import java.util.List;
+
+public class RegistrationSteps{
 
     private WebDriver webDriver;
     private RegistrationPage registrationPage;
@@ -31,9 +35,10 @@ public class RegistrationSteps {
         registrationPage.searchRegister();
     }
 
-    @When("the user fills all fields excepting cellphone")
-    public void theUserFillsAllFieldsExceptingCellphone()
+    @When("^the user fills all fields with corresponding data excepting cellphone$")
+    public void theUserFillsAllWithCorrespondingExceptingCellphone(DataTable fields)
     {
+        registrationPage.processDataTable(fields);
         registrationPage.insertData();
     }
 
