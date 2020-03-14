@@ -1,5 +1,6 @@
 package pages;
 
+import cucumber.api.DataTable;
 import cucumber.api.java.eo.Se;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

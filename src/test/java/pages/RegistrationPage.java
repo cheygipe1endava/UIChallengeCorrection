@@ -1,7 +1,6 @@
 package pages;
 
 import cucumber.api.DataTable;
-import helper.PropertiesHelper;
 import org.awaitility.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -9,9 +8,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import javax.xml.crypto.Data;
-
 import java.util.List;
 
 import static org.awaitility.Awaitility.await;

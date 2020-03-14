@@ -9,6 +9,7 @@ import cucumber.api.java.en.When;
 import helper.HookHelper;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
+import pages.HomePage;
 import pages.RegistrationPage;
 
 import java.util.List;
@@ -23,15 +24,10 @@ public class RegistrationSteps{
         webDriver = hookHelper.getWebDriver();
     }
 
-    @Given("the user is in Falabella's home page")
-    public void theUserIsInFalabellaSHomePage()
+    @Given("^the user goes to the registration page from Falabella's home page$")
+    public void theUserGoesToTheRegistrationPageFromFalabellaSHomePage()
     {
         registrationPage = new RegistrationPage(webDriver);
-    }
-
-    @And("goes to the registration page")
-    public void goesToTheRegistrationPage()
-    {
         registrationPage.searchRegister();
     }
 

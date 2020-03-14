@@ -1,8 +1,7 @@
 Feature: Registration
 
   Scenario: The user unsuccessfully register in Falabella's web page
-    Given the user is in Falabella's home page
-    And goes to the registration page
+    Given the user goes to the registration page from Falabella's home page
     When the user fills all fields with corresponding data excepting cellphone
       | name            | MARIA                |
       | firstLastName   | ANDRADE              |

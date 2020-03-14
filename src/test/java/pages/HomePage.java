@@ -1,5 +1,6 @@
 package pages;
 
+import cucumber.api.DataTable;
 import helper.PropertiesHelper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -9,65 +10,60 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.List;
+
 public class HomePage extends BasePage{
 
     private WebDriver webDriver;
     private WebElement passwordInput, loginButton, incorrectCredentials, logOut, verifyLogout, loggedInDiv, hoverAction;
-    private By wrongPasswordField = By.xpath("//input[@type='password']");
+    private WebDriverWait wait;
+    private List<List<String>> dataTable;
+
+    private By divLogin = By.className("fb-masthead-login");
+    private By loginField = By.className("Modal__modalcontent__2yJz6");
     private By passwordField = By.xpath("//input[@type='password']");
     private By findLoginButton = By.xpath("//*[contains(text(), 'Iniciar')]/.");
     private By waitLoginStatus = By.xpath("//*[@id='header-login-modal']/div/div/div");
     private By findLogoutElement = By.xpath("//*[@class='fb-filter-header__list']/li/a[@href='#']");
     private By emailInput = By.id("emailAddress");
-    private WebDriverWait wait;
 
-    @FindBy(className = "fb-masthead-login")
-    private WebElement loginDiv;
-
-    public HomePage(WebDriver webDriver) {
+    public HomePage(WebDriver webDriver)
+    {
         super(webDriver);
         this.webDriver = webDriver;
+        wait = new WebDriverWait(webDriver, Long.parseLong("5"));
+    }
+
+    public void processDataTable(DataTable fields)
+    {
+        dataTable = fields.raw();
     }
 
     public void openLoginFormOverlay()
     {
-        loginDiv.click();
+        webDriver.findElement(divLogin).click();
     }
 
     public void invalidEmailInsert()
     {
-        wait = new WebDriverWait(webDriver, Long.parseLong("5"));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("Modal__modalcontent__2yJz6")));
-        clickAndSendData(emailInput, PropertiesHelper.getValueByKey("invalidEmail"));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(loginField));
+        clickAndSendData(emailInput, dataTable.get(0).get(1));
     }
 
     public void invalidPasswordInsert()
     {
-        clickAndSendData(wrongPasswordField, PropertiesHelper.getValueByKey("invalidPassword"));
+        clickAndSendData(passwordField, dataTable.get(1).get(1));
     }
 
-    public void emailInsert()
+    public void validEmailInsert()
     {
-        wait = new WebDriverWait(webDriver, Long.parseLong("5"));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("Modal__modalcontent__2yJz6")));
-        clickAndSendData(emailInput, PropertiesHelper.getValueByKey("validEmail"));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(loginField));
+        clickAndSendData(emailInput, dataTable.get(0).get(1));
     }
 
-    public void passwordInsert()
+    public void validPasswordInsert()
     {
-        clickAndSendData(passwordField, PropertiesHelper.getValueByKey("validPassword"));
-    }
-
-    public void invalidDataInsert()
-    {
-        invalidEmailInsert();
-        invalidPasswordInsert();
-    }
-
-    public void validDataInsert()
-    {
-        emailInsert();
-        passwordInsert();
+        clickAndSendData(passwordField, dataTable.get(1).get(1));
     }
 
     public void loginButton()
@@ -75,7 +71,6 @@ public class HomePage extends BasePage{
         loginButton = webDriver.findElement(findLoginButton);
         loginButton.click();
     }
-
 
     public boolean invalidLogin()
     {
@@ -88,10 +83,9 @@ public class HomePage extends BasePage{
     public boolean userLoggedIn()
     {
         boolean loggedIn = false;
-        wait = new WebDriverWait(webDriver, Long.parseLong("5"));
         loggedInDiv = wait.until(ExpectedConditions.visibilityOfElementLocated(waitLoginStatus));
         String getloginText = loggedInDiv.getText();
-        if (getloginText.contains("Bienvenid@,"))
+        if (getloginText.contains("Bienvenid"))
         {
             loggedIn = true;
         }
@@ -100,7 +94,6 @@ public class HomePage extends BasePage{
 
     public void hoverAccountOptions()
     {
-        wait = new WebDriverWait(webDriver, Long.parseLong("5"));
         wait.until(ExpectedConditions.visibilityOfElementLocated(waitLoginStatus));
         hoverAction = webDriver.findElement(waitLoginStatus);
         Actions builder = new Actions(webDriver);
@@ -119,7 +112,7 @@ public class HomePage extends BasePage{
     {
         boolean loggedOut = false;
         wait = new WebDriverWait(webDriver, Long.parseLong("5"));
-        verifyLogout = wait.until(ExpectedConditions.elementToBeClickable(loginDiv));
+        verifyLogout = wait.until(ExpectedConditions.elementToBeClickable(divLogin));
         String getVerifyLogoutText = verifyLogout.getText();
         if (getVerifyLogoutText.contains("Inicia"))
         {
