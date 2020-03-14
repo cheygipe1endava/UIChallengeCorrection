@@ -10,26 +10,22 @@ public class HookHelper {
     private WebDriver webDriver;
 
     @Before
-    public void setUp()
-    {
-        if(webDriver == null)
-        {
+    public void setUp() {
+        if (webDriver == null) {
             webDriver = new ChromeDriver();
         }
         webDriver.manage().window().maximize();
         webDriver.get("https://www.falabella.com.co/falabella-co/");
     }
 
-    public WebDriver getWebDriver()
-    {
+    public WebDriver getWebDriver() {
         return webDriver;
     }
 
-    /*
+
     @After
-    public void tearDown()
-    {
+    public void tearDown() {
         webDriver.quit();
     }
-     */
 }
+
