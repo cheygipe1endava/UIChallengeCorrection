@@ -58,6 +58,6 @@ public class LoginSteps {
     @Then("^the user should be signed in$")
     public void theUserShouldBeSignedIn()
     {
-        Assert.assertEquals("Successfully logged in", true, homePage.userLoggedIn());
+        Assert.assertTrue("Successfully logged in", homePage.userLoggedIn());
     }
 }

@@ -35,10 +35,10 @@ public class RegistrationPage extends BasePage{
     private By day = By.id("day");
     private By month = By.id("month");
     private By year = By.id("year");
-    private By findFemaleButton = By.xpath("//*[@id='tipodireccion_0' and @value='female']");
     private By agreeTermsCheckBox = By.id("agreelegaleId");
     private By saveButton = By.id("boton_Ar");
     private By emptyCellphoneMessage = By.id("mensajeCelVacio");
+    private By findFemaleButton = By.xpath("//*[@id='tipodireccion_0' and @value='female']");
 
     public RegistrationPage(WebDriver webDriver)
     {

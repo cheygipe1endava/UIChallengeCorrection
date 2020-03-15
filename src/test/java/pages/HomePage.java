@@ -9,7 +9,6 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.List;
-
 import static org.awaitility.Awaitility.await;
 
 public class HomePage extends BasePage{
@@ -18,23 +17,24 @@ public class HomePage extends BasePage{
     private WebDriverWait wait;
     private List<List<String>> dataTable;
 
+    private By emailInput = By.id("emailAddress");
     private By loginDiv = By.className("fb-masthead-login");
-    private By logoutDiv = By.className("fb-filter-header__list");
-    private By loginField = By.className("Modal__modalcontent__2yJz6");
+    private By loginFields = By.className("Modal__modalcontent__2yJz6");
+    private By invalidLoginMessage = By.className("Login__message__3fDqw");
+    private By accountDropDown = By.className("fb-masthead__dropdown__menu");
     private By passwordField = By.xpath("//input[@type='password']");
     private By findLoginButton = By.xpath("//*[contains(text(), 'Iniciar')]/.");
-    private By invalidLoginMessage = By.className("Login__message__3fDqw");
-    private By waitLoginStatus = By.xpath("//*[@id='header-login-modal']/div/div/div");
-    private By findLogoutElement = By.xpath("//*[@class='fb-filter-header__list']/li/a[@href='#']");
-    private By findLoggedDivClick = By.className("Login__mobileValidations__2b6z-");
-    private By findLoginStatus = By.xpath("//*[@class='fb-masthead-login__user-info__logged']/*[@class='fb-masthead-login__name re-design-cl__name']");
-    private By emailInput = By.id("emailAddress");
+    private By loginText = By.xpath("//*[@class='fb-masthead-login__name re-design-cl__name']");
+    private By findLogoutElement = By.xpath
+            ("//*[@class='fb-filter-header__list']/li[@class='fb-filter-header__list-item']/a[text()='Cerrar sesión']");
+    private By findLoginDivText = By.xpath
+            ("//*[@class='Login__mobileValidations__2b6z- fb-masthead-login__user-info__logged']/div[@class='fb-masthead-login__user-info']");
 
     public HomePage(WebDriver webDriver)
     {
         super(webDriver);
         this.webDriver = webDriver;
-        wait = new WebDriverWait(webDriver, Long.parseLong("5"));
+        wait = new WebDriverWait(webDriver, Long.parseLong("10"));
     }
 
     public void processDataTable(DataTable fields)
@@ -49,7 +49,7 @@ public class HomePage extends BasePage{
 
     public void invalidEmailInsert()
     {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(loginField));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(loginFields));
         clickAndSendData(emailInput, dataTable.get(0).get(1));
     }
 
@@ -60,7 +60,7 @@ public class HomePage extends BasePage{
 
     public void validEmailInsert()
     {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(loginField));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(loginFields));
         clickAndSendData(emailInput, dataTable.get(0).get(1));
     }
 
@@ -85,14 +85,8 @@ public class HomePage extends BasePage{
     public boolean userLoggedIn()
     {
         boolean loggedIn = false;
-        await().atMost(Duration.TEN_SECONDS)
-                .pollInterval(Duration.ONE_SECOND)
-                .until(() -> {
-                            webDriver.findElement(findLoggedDivClick).click();
-                            return webDriver.findElement(findLoginStatus).isEnabled();
-                        }
-                );
-        String getLoginText = webDriver.findElement(findLoginStatus).getText();
+        wait.until(ExpectedConditions.presenceOfElementLocated(loginText));
+        String getLoginText = webDriver.findElement(loginText).getText();
         if (getLoginText.contains("Bienvenid"))
         {
             loggedIn = true;
@@ -110,29 +104,23 @@ public class HomePage extends BasePage{
 
     public void hoverAccountOptions()
     {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(waitLoginStatus));
-        WebElement hoverAction = webDriver.findElement(waitLoginStatus);
+        wait.until(ExpectedConditions.presenceOfElementLocated(loginDiv));
+        WebElement hoverAction = webDriver.findElement(loginDiv);
         Actions builder = new Actions(webDriver);
         builder.moveToElement(hoverAction).perform();
     }
 
     public void clickLogout()
     {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(logoutDiv));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(accountDropDown));
         webDriver.findElement(findLogoutElement).click();
     }
 
     public boolean verifyLogout()
     {
         boolean loggedOut = false;
-        await().atMost(Duration.TEN_SECONDS)
-                .pollInterval(Duration.ONE_SECOND)
-                .until(() -> {
-                    webDriver.findElement(loginDiv).click();
-                            return webDriver.findElement(loginDiv).isDisplayed();
-                        }
-                );
-        String getVerifyLogoutText = webDriver.findElement(loginDiv).getText();
+        wait.until(ExpectedConditions.presenceOfElementLocated(findLoginDivText));
+        String getVerifyLogoutText = webDriver.findElement(findLoginDivText).getText();
         if (getVerifyLogoutText.contains("Inicia"))
         {
             loggedOut = true;

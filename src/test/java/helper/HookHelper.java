@@ -1,6 +1,5 @@
 package helper;
 
-
 import cucumber.api.java.Before;
 import cucumber.api.java.After;
 import org.openqa.selenium.WebDriver;
@@ -21,7 +20,6 @@ public class HookHelper {
     public WebDriver getWebDriver() {
         return webDriver;
     }
-
 
     @After
     public void tearDown() {
