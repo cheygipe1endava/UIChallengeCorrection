@@ -1,7 +1,7 @@
 package pages;
 
 import cucumber.api.DataTable;
-import org.awaitility.Duration;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,7 +9,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.List;
-import static org.awaitility.Awaitility.await;
+
 
 public class HomePage extends BasePage{
 
@@ -18,6 +18,8 @@ public class HomePage extends BasePage{
     private List<List<String>> dataTable;
 
     private By emailInput = By.id("emailAddress");
+    private By searchBar = By.id("searchQuestionSolr");
+    private By productsCatalog = By.id("testId-searchResults-products");
     private By loginDiv = By.className("fb-masthead-login");
     private By loginFields = By.className("Modal__modalcontent__2yJz6");
     private By invalidLoginMessage = By.className("Login__message__3fDqw");
@@ -29,6 +31,7 @@ public class HomePage extends BasePage{
             ("//*[@class='fb-filter-header__list']/li[@class='fb-filter-header__list-item']/a[text()='Cerrar sesión']");
     private By findLoginDivText = By.xpath
             ("//*[@class='Login__mobileValidations__2b6z- fb-masthead-login__user-info__logged']/div[@class='fb-masthead-login__user-info']");
+    private By productResultList = By.xpath("//*[@class='jsx-1395131234 search-results-4-grid']");
 
     public HomePage(WebDriver webDriver)
     {
@@ -94,14 +97,6 @@ public class HomePage extends BasePage{
         return loggedIn;
     }
 
-    public void loginProcess()
-    {
-        openLoginFormOverlay();
-        validEmailInsert();
-        validPasswordInsert();
-        loginButton();
-    }
-
     public void hoverAccountOptions()
     {
         wait.until(ExpectedConditions.presenceOfElementLocated(loginDiv));
@@ -126,5 +121,30 @@ public class HomePage extends BasePage{
             loggedOut = true;
         }
         return loggedOut;
+    }
+
+    public void typeInSearchBar(String searchProduct)
+    {
+        clickAndSendData(searchBar, searchProduct + Keys.ENTER);
+    }
+
+    public boolean confirmSearchPage(String searchProduct)
+    {
+        boolean verifyProductPageRedirection = false;
+        wait.until(ExpectedConditions.visibilityOfElementLocated(productsCatalog));
+        List<WebElement> productResults = webDriver.findElements(productResultList);
+        if(productResults.get(0).getText().toLowerCase().contains(searchProduct))
+        {
+            verifyProductPageRedirection = true;
+        }
+        return verifyProductPageRedirection;
+    }
+
+    public void loginProcess()
+    {
+        openLoginFormOverlay();
+        validEmailInsert();
+        validPasswordInsert();
+        loginButton();
     }
 }

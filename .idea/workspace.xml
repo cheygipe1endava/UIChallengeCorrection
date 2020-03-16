@@ -3,20 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="7be9d565-1abe-42cb-9363-25b85d6167fd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/helper/HookHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/helper/HookHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/helper/PropertiesHelper.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/RegistrationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/RegistrationPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/steps/LoginSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/LoginSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/steps/LogoutSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/LogoutSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/helper/HookHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/helper/HookHelper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/helper/PropertiesHelper.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/pages/HomePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/HomePage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/RegistrationPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/RegistrationPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/steps/LoginSteps.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/steps/LoginSteps.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/steps/LogoutSteps.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/steps/LogoutSteps.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,13 +44,13 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../UI WORKSHOP/UIChallenge-fe021a760c54fcf0c2bf7b0ec9a963fb24ff25c4" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
-  <component name="RunManager" selected="JUnit.Runner">
+  <component name="RunManager" selected="Cucumber java.Feature: Search">
     <configuration name="Feature: Login" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="1.2" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/Login.feature" />
@@ -99,15 +87,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: The user successfully signs in Falabella's web page" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Feature: Search" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="1.2" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/Login.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/Search.feature" />
       <option name="GLUE" value="helper steps" />
       <option name="MAIN_CLASS_NAME" value="cucumber.api.cli.Main" />
       <module name="untitled" />
-      <option name="NAME_FILTER" value="^The user successfully signs in Falabella\'s web page$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvmSMFormatter --monochrome --name &quot;^The user successfully signs in Falabella\'s web page$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: The user successfully signs in Falabella's web page" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvmSMFormatter --monochrome" />
+      <option name="SUGGESTED_NAME" value="Feature: Search" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="cucumber.api.cli.*" />
@@ -154,11 +141,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Cucumber java.Feature: Search" />
         <item itemvalue="JUnit.Runner" />
         <item itemvalue="Cucumber java.Feature: Login" />
         <item itemvalue="Cucumber java.Feature: Logout" />
         <item itemvalue="Cucumber java.Scenario: The user successfully signs out of Falabella's web page" />
-        <item itemvalue="Cucumber java.Scenario: The user successfully signs in Falabella's web page" />
       </list>
     </recent_temporary>
   </component>
@@ -184,46 +171,46 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1380" y="389" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584130347976" />
-    <state x="641" y="333" key="#xdebugger.evaluate" timestamp="1584292398757">
+    <state x="1092" y="435" key="#xdebugger.evaluate" timestamp="1584317839894">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="641" y="333" key="#xdebugger.evaluate/0.0.1920.1040@0.0.1920.1040" timestamp="1584292398757" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1584158674424">
+    <state x="1092" y="435" key="#xdebugger.evaluate/0.0.1920.1040@0.0.1920.1040" timestamp="1584317839894" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1584309871580">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1584158674424" />
-    <state width="1877" height="218" key="GridCell.Tab.0.bottom" timestamp="1584297490686">
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1584309871580" />
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1584317864359">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="218" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584297490686" />
-    <state width="1877" height="218" key="GridCell.Tab.0.center" timestamp="1584297490686">
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584317864359" />
+    <state width="1877" height="348" key="GridCell.Tab.0.center" timestamp="1584317864359">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="218" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584297490686" />
-    <state width="1877" height="218" key="GridCell.Tab.0.left" timestamp="1584297490686">
+    <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584317864359" />
+    <state width="1877" height="348" key="GridCell.Tab.0.left" timestamp="1584317864359">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="218" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584297490686" />
-    <state width="1877" height="218" key="GridCell.Tab.0.right" timestamp="1584297490686">
+    <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584317864359" />
+    <state width="1877" height="348" key="GridCell.Tab.0.right" timestamp="1584317864359">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="218" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584297490686" />
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1584297448957">
+    <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584317864359" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1584317864359">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584297448957" />
-    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1584297448957">
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584317864359" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1584317864359">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584297448957" />
-    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1584297448957">
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584317864359" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1584317864359">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584297448957" />
-    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1584297448957">
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584317864359" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1584317864359">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584297448957" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584317864359" />
     <state x="490" y="175" key="Maven.ArtifactSearchDialog" timestamp="1584130931441">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -232,9 +219,13 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="798" y="118" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1584129463730" />
-    <state x="712" y="441" key="org.jetbrains.plugins.cucumber.inspections.ui.CreateStepDefinitionFileDialog" timestamp="1584158548598">
+    <state x="712" y="441" key="org.jetbrains.plugins.cucumber.inspections.ui.CreateStepDefinitionFileDialog" timestamp="1584308671080">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="712" y="441" key="org.jetbrains.plugins.cucumber.inspections.ui.CreateStepDefinitionFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584158548598" />
+    <state x="712" y="441" key="org.jetbrains.plugins.cucumber.inspections.ui.CreateStepDefinitionFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584308671080" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1584312984304">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1584312984304" />
   </component>
 </project>
