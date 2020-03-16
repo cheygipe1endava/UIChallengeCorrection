@@ -20,8 +20,6 @@ public class HomePage extends BasePage{
     private By emailInput = By.id("emailAddress");
     private By searchBar = By.id("searchQuestionSolr");
     private By productsCatalog = By.id("testId-searchResults-products");
-    private By priceButton = By.id("testId-Accordion-Precio");
-
     private By loginDiv = By.className("fb-masthead-login");
     private By loginFields = By.className("Modal__modalcontent__2yJz6");
     private By invalidLoginMessage = By.className("Login__message__3fDqw");
