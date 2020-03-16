@@ -3,11 +3,22 @@
   <component name="ChangeListManager">
     <list default="true" id="7be9d565-1abe-42cb-9363-25b85d6167fd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/helper/HookHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/helper/HookHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/HomePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/ProductPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/ProductPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/steps/AddToShoppingCartSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/AddToShoppingCartSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/AddToShoppingCart.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/AddToShoppingCart.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/RegistrationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/RegistrationPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/ShoppingCartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/ShoppingBagPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/AddToShoppingCartSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/AddToShoppingBagSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/DeleteFromShoppingCartSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/DeleteFromShoppingBagSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/LogoutSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/LogoutSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/AddToShoppingCart.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/AddToShoppingBag.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/DeleteFromShoppingCart.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/DeleteFromShoppingBag.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Login.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Login.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/features/AddToShoppingCart.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/features/DeleteFromShoppingCart.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/ProductPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/ProductPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/RegistrationPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/RegistrationPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/steps/AddToShoppingCartSteps.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/steps/LogoutSteps.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/steps/LogoutSteps.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,15 +64,15 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
-  <component name="RunManager" selected="Cucumber java.Feature: AddToShoppingCart">
-    <configuration name="Feature: AddToShoppingCart" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Cucumber java.Feature: AddToShoppingBag">
+    <configuration name="Feature: AddToShoppingBag" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="1.2" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/AddToShoppingCart.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/AddToShoppingBag.feature" />
       <option name="GLUE" value="helper steps" />
       <option name="MAIN_CLASS_NAME" value="cucumber.api.cli.Main" />
       <module name="untitled" />
       <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvmSMFormatter --monochrome" />
-      <option name="SUGGESTED_NAME" value="Feature: AddToShoppingCart" />
+      <option name="SUGGESTED_NAME" value="Feature: AddToShoppingBag" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="cucumber.api.cli.*" />
@@ -72,14 +83,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Feature: Filter" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Feature: DeleteFromShoppingCart" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="1.2" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/Filter.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/DeleteFromShoppingCart.feature" />
       <option name="GLUE" value="helper steps" />
       <option name="MAIN_CLASS_NAME" value="cucumber.api.cli.Main" />
       <module name="untitled" />
       <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvmSMFormatter --monochrome" />
-      <option name="SUGGESTED_NAME" value="Feature: Filter" />
+      <option name="SUGGESTED_NAME" value="Feature: DeleteFromShoppingCart" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="cucumber.api.cli.*" />
@@ -90,14 +101,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Feature: Search" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Feature: Login" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="1.2" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/Search.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/Login.feature" />
       <option name="GLUE" value="helper steps" />
       <option name="MAIN_CLASS_NAME" value="cucumber.api.cli.Main" />
       <module name="untitled" />
       <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvmSMFormatter --monochrome" />
-      <option name="SUGGESTED_NAME" value="Feature: Search" />
+      <option name="SUGGESTED_NAME" value="Feature: Login" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="cucumber.api.cli.*" />
@@ -108,15 +119,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: The user needs to add a product to the shopping cart" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Feature: Logout" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="1.2" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/AddToShoppingCart.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/Logout.feature" />
       <option name="GLUE" value="helper steps" />
       <option name="MAIN_CLASS_NAME" value="cucumber.api.cli.Main" />
       <module name="untitled" />
-      <option name="NAME_FILTER" value="^The user needs to add a product to the shopping cart$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvmSMFormatter --monochrome --name &quot;^The user needs to add a product to the shopping cart$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: The user needs to add a product to the shopping cart" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvmSMFormatter --monochrome" />
+      <option name="SUGGESTED_NAME" value="Feature: Logout" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="cucumber.api.cli.*" />
@@ -127,28 +137,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Runner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: The user successfully signs in Falabella's web page" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="1.2" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/Login.feature" />
+      <option name="GLUE" value="helper steps" />
+      <option name="MAIN_CLASS_NAME" value="cucumber.api.cli.Main" />
       <module name="untitled" />
+      <option name="NAME_FILTER" value="^The user successfully signs in Falabella\'s web page$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvmSMFormatter --monochrome --name &quot;^The user successfully signs in Falabella\'s web page$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: The user successfully signs in Falabella's web page" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="runner.*" />
+          <option name="PATTERN" value="cucumber.api.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="runner" />
-      <option name="MAIN_CLASS_NAME" value="runner.Runner" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Cucumber java.Feature: AddToShoppingCart" />
-        <item itemvalue="Cucumber java.Scenario: The user needs to add a product to the shopping cart" />
-        <item itemvalue="Cucumber java.Feature: Filter" />
-        <item itemvalue="Cucumber java.Feature: Search" />
-        <item itemvalue="JUnit.Runner" />
+        <item itemvalue="Cucumber java.Feature: AddToShoppingBag" />
+        <item itemvalue="Cucumber java.Scenario: The user successfully signs in Falabella's web page" />
+        <item itemvalue="Cucumber java.Feature: Login" />
+        <item itemvalue="Cucumber java.Feature: Logout" />
+        <item itemvalue="Cucumber java.Feature: DeleteFromShoppingCart" />
       </list>
     </recent_temporary>
   </component>
@@ -170,6 +184,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="708" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1584140899425" />
+    <state x="491" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1584396190431">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="491" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584396190431" />
     <state x="1380" y="389" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1584130347976">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -182,38 +200,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1584366276992" />
-    <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1584379730073">
+    <state width="1877" height="263" key="GridCell.Tab.0.bottom" timestamp="1584398948482">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584379730073" />
-    <state width="1877" height="348" key="GridCell.Tab.0.center" timestamp="1584379730073">
+    <state width="1877" height="263" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584398948482" />
+    <state width="1877" height="263" key="GridCell.Tab.0.center" timestamp="1584398948481">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584379730073" />
-    <state width="1877" height="348" key="GridCell.Tab.0.left" timestamp="1584379730073">
+    <state width="1877" height="263" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584398948481" />
+    <state width="1877" height="263" key="GridCell.Tab.0.left" timestamp="1584398948481">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584379730073" />
-    <state width="1877" height="348" key="GridCell.Tab.0.right" timestamp="1584379730073">
+    <state width="1877" height="263" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584398948481" />
+    <state width="1877" height="263" key="GridCell.Tab.0.right" timestamp="1584398948481">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584379730073" />
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1584379730074">
+    <state width="1877" height="263" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584398948481" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1584394560092">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584379730074" />
-    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1584379730074">
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584394560092" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1584394560092">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584379730074" />
-    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1584379730073">
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584394560092" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1584394560092">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584379730073" />
-    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1584379730074">
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584394560092" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1584394560092">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584379730074" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584394560092" />
     <state x="490" y="175" key="Maven.ArtifactSearchDialog" timestamp="1584130931441">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -222,10 +240,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="798" y="118" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1584129463730" />
-    <state x="712" y="441" key="org.jetbrains.plugins.cucumber.inspections.ui.CreateStepDefinitionFileDialog" timestamp="1584366741520">
+    <state x="712" y="441" key="org.jetbrains.plugins.cucumber.inspections.ui.CreateStepDefinitionFileDialog" timestamp="1584381105510">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="712" y="441" key="org.jetbrains.plugins.cucumber.inspections.ui.CreateStepDefinitionFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584366741520" />
+    <state x="712" y="441" key="org.jetbrains.plugins.cucumber.inspections.ui.CreateStepDefinitionFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584381105510" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1584312984304">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

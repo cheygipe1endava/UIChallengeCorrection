@@ -1,6 +1,5 @@
 package steps;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -10,16 +9,16 @@ import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import pages.HomePage;
 import pages.ProductPage;
-import pages.ShoppingCartPage;
+import pages.ShoppingBagPage;
 
-public class AddToShoppingCartSteps {
+public class AddToShoppingBagSteps {
 
     private WebDriver webDriver;
     private HomePage homePage;
-    private ShoppingCartPage shoppingCartPage;
+    private ShoppingBagPage shoppingBagPage;
     private ProductPage productPage;
 
-    public AddToShoppingCartSteps(HookHelper hookHelper)
+    public AddToShoppingBagSteps(HookHelper hookHelper)
     {
         webDriver = hookHelper.getWebDriver();
     }
@@ -29,7 +28,7 @@ public class AddToShoppingCartSteps {
     {
         homePage = new HomePage(webDriver);
         productPage = new ProductPage(webDriver);
-        shoppingCartPage = new ShoppingCartPage(webDriver);
+        shoppingBagPage = new ShoppingBagPage(webDriver);
         homePage.typeInSearchBar(searchProduct);
         productPage.confirmSearchPage(searchProduct);
         productPage.clickFirstMatch();
@@ -38,6 +37,9 @@ public class AddToShoppingCartSteps {
     @Given("^the user is in a product page$")
     public void theUserIsInAProductPage()
     {
+        homePage = new HomePage(webDriver);
+        productPage = new ProductPage(webDriver);
+        shoppingBagPage = new ShoppingBagPage(webDriver);
         Assert.assertTrue("Successfully applied price filter from", productPage.confirmFirstMatchPage());
     }
 
@@ -57,15 +59,7 @@ public class AddToShoppingCartSteps {
     public void theUserGoesToShoppingBagToDeleteTheProductFromItAndMessageIsDisplayed(String emptyMessage)
     {
         productPage.clickGoToShoppingBag();
-        shoppingCartPage.clickDeleteProduct();
-        Assert.assertTrue("Successfully deleted item from shopping cart", shoppingCartPage.emptyShoppingBag(emptyMessage));
-    }
-
-    @And("^the user closes the session$")
-    public void theUserClosesTheSession()
-    {
-        homePage.hoverAccountOptions();
-        homePage.clickLogout();
-        Assert.assertTrue("Successfully logged out", homePage.verifyLogout());
+        shoppingBagPage.clickDeleteProduct();
+        Assert.assertTrue("Successfully deleted item from shopping cart", shoppingBagPage.emptyShoppingBag(emptyMessage));
     }
 }

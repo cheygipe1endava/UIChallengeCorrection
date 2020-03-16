@@ -5,7 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.util.List;
 
 public class ProductPage extends BasePage
@@ -31,12 +30,9 @@ public class ProductPage extends BasePage
     private By addToCartButton = By.xpath("//*[@id='buttonForCustomers']/button[@class]");
     private By popUpAddedToCart = By.xpath("//*[@class='jsx-3049166186 popup small']");
     private By confirmProductAdded = By.xpath("//*[@class='jsx-351245194 item-info']");
+    private By goToShoppingBagButton = By.xpath("//*[@class='jsx-3049166186 sub-footer']/div[@class='jsx-3049166186 addToCart-btn']");
     private By shoppingCart = By.xpath("//*[@id='testId-userActions-basket']" +
             "/div[@class='jsx-2422992112 content-wrapper']/a[@class='jsx-2422992112']/i[@data-count]");
-    private By goToShoppingBagButton = By.xpath("//*[@class='jsx-3049166186 sub-footer']/div[@class='jsx-3049166186 addToCart-btn']");
-    private By closePopUp = By.xpath("//*[@class='jsx-3049166186 header']/button[@class='jsx-3049166186']");
-
-
 
     public ProductPage(WebDriver webDriver)
     {

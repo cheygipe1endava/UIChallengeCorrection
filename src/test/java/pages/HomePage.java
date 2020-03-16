@@ -28,7 +28,6 @@ public class HomePage extends BasePage{
             ("//*[@class='fb-filter-header__list']/li[@class='fb-filter-header__list-item']/a[text()='Cerrar sesión']");
     private By findLoginDivText = By.xpath
             ("//*[@class='Login__mobileValidations__2b6z- fb-masthead-login__user-info__logged']/div[@class='fb-masthead-login__user-info']");
-    private By shoppingBag = By.xpath("//*[@class='fb-masthead-basket__count']");
 
     public HomePage(WebDriver webDriver)
     {
@@ -123,16 +122,6 @@ public class HomePage extends BasePage{
     public void typeInSearchBar(String searchProduct)
     {
         clickAndSendData(searchBar, searchProduct + Keys.ENTER);
-    }
-
-    public void clickShoppingBag()
-    {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(shoppingBag));
-        String verifyBagItems = webDriver.findElement(shoppingBag).getText();
-        if(!verifyBagItems.equals("0"))
-        {
-            webDriver.findElement(shoppingBag).click();
-        }
     }
 
     public void loginProcess()

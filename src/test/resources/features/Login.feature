@@ -15,4 +15,5 @@ Feature: Login
       | password | sD4eMa9TKtsFdJGs           |
     And clicks login button
     Then the user should be signed in
+    And the user closes the session
 

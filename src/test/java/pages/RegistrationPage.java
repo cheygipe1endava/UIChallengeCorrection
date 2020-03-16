@@ -18,7 +18,6 @@ public class RegistrationPage extends BasePage{
     private WebElement termsCheckbox;
     private WebDriverWait wait;
     private List<List<String>> dataTable;
-
     private By divLogin = By.className("fb-masthead-login");
     private By loginOverlay = By.className("Modal__modalcontent__2yJz6");
     private By registerText = By.className("Login__createAccount__38c2o");

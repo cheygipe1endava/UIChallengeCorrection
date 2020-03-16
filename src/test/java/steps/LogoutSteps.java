@@ -20,19 +20,10 @@ public class LogoutSteps {
         webDriver = hookHelper.getWebDriver();
     }
 
-    @Given("^the user logs in Falabella's web page$")
-    public void theUserLogsInFalabellaSWebPage(DataTable fields)
-    {
-        homePage = new HomePage(webDriver);
-        homePage.processDataTable(fields);
-        homePage.loginProcess();
-        Assert.assertTrue("Successfully logged in", homePage.userLoggedIn());
-    }
-
     @Given("^the user is currently logged in Falabella's home page$")
     public void theUserIsCurrentlyLoggedInFalabellaSHomePage()
     {
-
+        homePage = new HomePage(webDriver);
     }
 
     @When("^the user hover on account div$")

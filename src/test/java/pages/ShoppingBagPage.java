@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class ShoppingCartPage extends BasePage
+public class ShoppingBagPage extends BasePage
 {
     private WebDriver webDriver;
     private WebDriverWait wait;
@@ -13,7 +13,7 @@ public class ShoppingCartPage extends BasePage
     private By deleteProduct = By.xpath("//*[@class='fb-prod-actionButton']/a[text()='Eliminar']");
     private By emptyBag = By.xpath("//*[@class='fb-order-status__empty-basket']");
 
-    public ShoppingCartPage(WebDriver webDriver)
+    public ShoppingBagPage(WebDriver webDriver)
     {
         super(webDriver);
         this.webDriver = webDriver;
