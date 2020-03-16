@@ -108,7 +108,7 @@ public class ProductPage extends BasePage
         wait.until(ExpectedConditions.visibilityOfElementLocated(popUpAddedToCart));
         String confirmProductAddedText = webDriver.findElement(confirmProductAdded).getText().toLowerCase();
         String shoppingCartIcon = webDriver.findElement(shoppingCart).getAttribute("data-count");
-        if(confirmProductAddedText.contains(objectNameText) && shoppingCartIcon != "0")
+        if(confirmProductAddedText.contains(objectNameText) && !shoppingCartIcon.equals("0"))
         {
             verifyProductAddedToCart = true;
         }
