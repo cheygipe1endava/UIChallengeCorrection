@@ -10,11 +10,13 @@ import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import pages.HomePage;
+import pages.ProductPage;
 import pages.ShoppingCartPage;
 
 public class DeleteFromShoppingCartSteps
 {
     private HomePage homePage;
+    private ProductPage productPage;
     private ShoppingCartPage shoppingCartPage;
     private WebDriver webDriver;
 
@@ -23,22 +25,29 @@ public class DeleteFromShoppingCartSteps
         webDriver = hookHelper.getWebDriver();
     }
 
-    @Given("^the user clicks on shopping bag icon with at least \"([^\"]*)\" product on it$")
-    public void theUserClicksOnShoppingBagIconWithAtLeastProductOnIt(String numberOfObjects)
+    @And("^adds the product to the shopping bag and closes pop up$")
+    public void addsTheProductToTheShoppingBagAndClosesPopUp()
+    {
+        productPage = new ProductPage(webDriver);
+        productPage.clickAddToCartButton();
+    }
+
+    @Given("^the user added a product and clicks on go to shopping bag button$")
+    public void theUserAddedAProductAndClicksOnGoToShoppingBagButton()
     {
         homePage = new HomePage(webDriver);
         shoppingCartPage = new ShoppingCartPage(webDriver);
-        homePage.clickShoppingBag();
+        productPage.clickGoToShoppingBag();
     }
 
-    @When("^the user click to delete the product from the shopping bag$")
-    public void theUserClickToDeleteTheProductFromTheShoppingBag()
+    @When("^the user clicks to delete the product from the shopping bag$")
+    public void theUserClicksToDeleteTheProductFromTheShoppingBag()
     {
         shoppingCartPage.clickDeleteProduct();
     }
 
-    @Then("^the web page displays message \"([^\"]*)\" to user saying the cart is empty$")
-    public void theWebPageDisplaysMessageToUserSayingTheCartIsEmpty(String emptyMessage)
+    @Then("^the web page displays message \"([^\"]*)\" to user saying the bag is empty$")
+    public void theWebPageDisplaysMessageToUserSayingTheBagIsEmpty(String emptyMessage)
     {
         Assert.assertTrue("Successfully deleted item from shopping cart", shoppingCartPage.emptyShoppingBag(emptyMessage));
     }

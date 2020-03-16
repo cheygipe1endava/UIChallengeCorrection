@@ -10,7 +10,8 @@ Feature: Add to shopping cart
     Given the user is in a product page
     When the user clicks button to add the product to the bag
     Then the web page displays pop up message to user with the confirmation
-    And the user deletes product from shopping bag and message "tu bolsa de compras está vacía" is displayed
+    And the user goes to shopping bag to delete the product from it and message "tu bolsa de compras está vacía" is displayed
+    And the user closes the session
 
 
 

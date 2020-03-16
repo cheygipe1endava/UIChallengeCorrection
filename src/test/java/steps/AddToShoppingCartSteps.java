@@ -53,11 +53,19 @@ public class AddToShoppingCartSteps {
         Assert.assertTrue("Successfully added item to shopping cart", productPage.productAddedToCart());
     }
 
-    @And("^the user deletes product from shopping bag and message \"([^\"]*)\" is displayed$")
-    public void theUserDeletesProductFromShoppingBagAndMessageIsDisplayed(String emptyMessage)
+    @And("^the user goes to shopping bag to delete the product from it and message \"([^\"]*)\" is displayed$")
+    public void theUserGoesToShoppingBagToDeleteTheProductFromItAndMessageIsDisplayed(String emptyMessage)
     {
         productPage.clickGoToShoppingBag();
         shoppingCartPage.clickDeleteProduct();
         Assert.assertTrue("Successfully deleted item from shopping cart", shoppingCartPage.emptyShoppingBag(emptyMessage));
+    }
+
+    @And("^the user closes the session$")
+    public void theUserClosesTheSession()
+    {
+        homePage.hoverAccountOptions();
+        homePage.clickLogout();
+        Assert.assertTrue("Successfully logged out", homePage.verifyLogout());
     }
 }

@@ -34,6 +34,9 @@ public class ProductPage extends BasePage
     private By shoppingCart = By.xpath("//*[@id='testId-userActions-basket']" +
             "/div[@class='jsx-2422992112 content-wrapper']/a[@class='jsx-2422992112']/i[@data-count]");
     private By goToShoppingBagButton = By.xpath("//*[@class='jsx-3049166186 sub-footer']/div[@class='jsx-3049166186 addToCart-btn']");
+    private By closePopUp = By.xpath("//*[@class='jsx-3049166186 header']/button[@class='jsx-3049166186']");
+
+
 
     public ProductPage(WebDriver webDriver)
     {
@@ -100,6 +103,7 @@ public class ProductPage extends BasePage
 
     public void clickAddToCartButton()
     {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(addToCartButton));
         webDriver.findElement(addToCartButton).click();
     }
 
@@ -118,6 +122,7 @@ public class ProductPage extends BasePage
 
     public void clickGoToShoppingBag()
     {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(popUpAddedToCart));
         webDriver.findElement(goToShoppingBagButton).click();
     }
 }
