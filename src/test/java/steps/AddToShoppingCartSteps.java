@@ -1,5 +1,6 @@
 package steps;
 
+import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -9,11 +10,13 @@ import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import pages.HomePage;
 import pages.ProductPage;
+import pages.ShoppingCartPage;
 
 public class AddToShoppingCartSteps {
 
     private WebDriver webDriver;
     private HomePage homePage;
+    private ShoppingCartPage shoppingCartPage;
     private ProductPage productPage;
 
     public AddToShoppingCartSteps(HookHelper hookHelper)
@@ -26,6 +29,7 @@ public class AddToShoppingCartSteps {
     {
         homePage = new HomePage(webDriver);
         productPage = new ProductPage(webDriver);
+        shoppingCartPage = new ShoppingCartPage(webDriver);
         homePage.typeInSearchBar(searchProduct);
         productPage.confirmSearchPage(searchProduct);
         productPage.clickFirstMatch();
@@ -37,8 +41,8 @@ public class AddToShoppingCartSteps {
         Assert.assertTrue("Successfully applied price filter from", productPage.confirmFirstMatchPage());
     }
 
-    @When("^the user clicks button to add the product to the cart$")
-    public void theUserClicksButtonToAddTheProductToTheCart()
+    @When("^the user clicks button to add the product to the bag$")
+    public void theUserClicksButtonToAddTheProductToTheBag()
     {
         productPage.clickAddToCartButton();
     }
@@ -47,5 +51,13 @@ public class AddToShoppingCartSteps {
     public void theWebPageDisplaysPopUpMessageToUserWithTheConfirmation()
     {
         Assert.assertTrue("Successfully added item to shopping cart", productPage.productAddedToCart());
+    }
+
+    @And("^the user deletes product from shopping bag and message \"([^\"]*)\" is displayed$")
+    public void theUserDeletesProductFromShoppingBagAndMessageIsDisplayed(String emptyMessage)
+    {
+        productPage.clickGoToShoppingBag();
+        shoppingCartPage.clickDeleteProduct();
+        Assert.assertTrue("Successfully deleted item from shopping cart", shoppingCartPage.emptyShoppingBag(emptyMessage));
     }
 }

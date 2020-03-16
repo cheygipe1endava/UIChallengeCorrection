@@ -33,6 +33,7 @@ public class ProductPage extends BasePage
     private By confirmProductAdded = By.xpath("//*[@class='jsx-351245194 item-info']");
     private By shoppingCart = By.xpath("//*[@id='testId-userActions-basket']" +
             "/div[@class='jsx-2422992112 content-wrapper']/a[@class='jsx-2422992112']/i[@data-count]");
+    private By goToShoppingBagButton = By.xpath("//*[@class='jsx-3049166186 sub-footer']/div[@class='jsx-3049166186 addToCart-btn']");
 
     public ProductPage(WebDriver webDriver)
     {
@@ -113,5 +114,10 @@ public class ProductPage extends BasePage
             verifyProductAddedToCart = true;
         }
         return verifyProductAddedToCart;
+    }
+
+    public void clickGoToShoppingBag()
+    {
+        webDriver.findElement(goToShoppingBagButton).click();
     }
 }
