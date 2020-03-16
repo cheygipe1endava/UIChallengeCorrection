@@ -26,12 +26,13 @@ public class LogoutSteps {
         homePage = new HomePage(webDriver);
         homePage.processDataTable(fields);
         homePage.loginProcess();
+        Assert.assertTrue("Successfully logged in", homePage.userLoggedIn());
     }
 
     @Given("^the user is currently logged in Falabella's home page$")
     public void theUserIsCurrentlyLoggedInFalabellaSHomePage()
     {
-        Assert.assertTrue("Successfully logged in", homePage.userLoggedIn());
+
     }
 
     @When("^the user hover on account div$")

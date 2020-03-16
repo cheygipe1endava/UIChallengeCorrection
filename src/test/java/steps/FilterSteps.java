@@ -25,13 +25,14 @@ public class FilterSteps {
     public void theUserSearchesForInSearchBar(String searchProduct)
     {
         homePage = new HomePage(webDriver);
+        productPage = new ProductPage(webDriver);
         homePage.typeInSearchBar(searchProduct);
+        Assert.assertTrue("User redirected to" + searchProduct + "page", productPage.confirmSearchPage(searchProduct));
     }
 
     @Given("^the user is in \"([^\"]*)\" product page$")
     public void theUserIsInProductPage(String searchProduct)
     {
-        Assert.assertTrue("User redirected to" + searchProduct + "page", homePage.confirmSearchPage(searchProduct));
         productPage = new ProductPage(webDriver);
     }
 

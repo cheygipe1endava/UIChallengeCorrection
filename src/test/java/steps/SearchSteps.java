@@ -9,10 +9,12 @@ import helper.HookHelper;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import pages.HomePage;
+import pages.ProductPage;
 
 public class SearchSteps {
 
     private HomePage homePage;
+    private ProductPage productPage;
     private WebDriver webDriver;
 
     public SearchSteps(HookHelper hookHelper)
@@ -24,6 +26,7 @@ public class SearchSteps {
     public void theUserIsInFalabellaSHomePage()
     {
         homePage = new HomePage(webDriver);
+        productPage = new ProductPage(webDriver);
     }
 
     @When("^the user types \"([^\"]*)\" in the search bar and press enter$")
@@ -35,6 +38,6 @@ public class SearchSteps {
     @Then("^the user should be redirected to \"([^\"]*)\" resulting matches page$")
     public void theUserShouldBeRedirectedToResultingMatchesPage(String searchProduct)
     {
-        Assert.assertTrue("User redirected to" + searchProduct + "page", homePage.confirmSearchPage(searchProduct));
+        Assert.assertTrue("User redirected to" + searchProduct + "page", productPage.confirmSearchPage(searchProduct));
     }
 }

@@ -16,10 +16,8 @@ public class HomePage extends BasePage{
     private WebDriver webDriver;
     private WebDriverWait wait;
     private List<List<String>> dataTable;
-
     private By emailInput = By.id("emailAddress");
     private By searchBar = By.id("searchQuestionSolr");
-    private By productsCatalog = By.id("testId-searchResults-products");
     private By loginDiv = By.className("fb-masthead-login");
     private By loginFields = By.className("Modal__modalcontent__2yJz6");
     private By invalidLoginMessage = By.className("Login__message__3fDqw");
@@ -31,7 +29,6 @@ public class HomePage extends BasePage{
             ("//*[@class='fb-filter-header__list']/li[@class='fb-filter-header__list-item']/a[text()='Cerrar sesión']");
     private By findLoginDivText = By.xpath
             ("//*[@class='Login__mobileValidations__2b6z- fb-masthead-login__user-info__logged']/div[@class='fb-masthead-login__user-info']");
-    private By productResultList = By.xpath("//*[@class='jsx-1395131234 search-results-4-grid']");
 
     public HomePage(WebDriver webDriver)
     {
@@ -126,18 +123,6 @@ public class HomePage extends BasePage{
     public void typeInSearchBar(String searchProduct)
     {
         clickAndSendData(searchBar, searchProduct + Keys.ENTER);
-    }
-
-    public boolean confirmSearchPage(String searchProduct)
-    {
-        boolean verifyProductPageRedirection = false;
-        wait.until(ExpectedConditions.visibilityOfElementLocated(productsCatalog));
-        List<WebElement> productResults = webDriver.findElements(productResultList);
-        if(productResults.get(0).getText().toLowerCase().contains(searchProduct))
-        {
-            verifyProductPageRedirection = true;
-        }
-        return verifyProductPageRedirection;
     }
 
     public void loginProcess()
