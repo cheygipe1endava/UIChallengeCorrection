@@ -1,4 +1,4 @@
-Feature: Login
+Feature: Search
 
   Scenario: The user searches for "cremas" in Falabella's web page
     Given the user is in Falabella's home page
