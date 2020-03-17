@@ -46,24 +46,13 @@ public class HomePage extends BasePage{
         webDriver.findElement(loginDiv).click();
     }
 
-    public void invalidEmailInsert()
+    public void EmailInsert()
     {
         wait.until(ExpectedConditions.visibilityOfElementLocated(loginFields));
         clickAndSendData(emailInput, dataTable.get(0).get(1));
     }
 
-    public void invalidPasswordInsert()
-    {
-        clickAndSendData(passwordField, dataTable.get(1).get(1));
-    }
-
-    public void validEmailInsert()
-    {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(loginFields));
-        clickAndSendData(emailInput, dataTable.get(0).get(1));
-    }
-
-    public void validPasswordInsert()
+    public void PasswordInsert()
     {
         clickAndSendData(passwordField, dataTable.get(1).get(1));
     }
@@ -127,8 +116,8 @@ public class HomePage extends BasePage{
     public void loginProcess()
     {
         openLoginFormOverlay();
-        validEmailInsert();
-        validPasswordInsert();
+        EmailInsert();
+        PasswordInsert();
         loginButton();
     }
 }

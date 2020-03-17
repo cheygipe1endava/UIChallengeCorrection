@@ -7,15 +7,11 @@ import helper.HookHelper;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import pages.HomePage;
-import pages.ProductPage;
-import pages.ShoppingBagPage;
 
 public class GeneralSteps
 {
     private WebDriver webDriver;
     private HomePage homePage;
-    private ProductPage productPage;
-    private ShoppingBagPage shoppingBagPage;
 
     public GeneralSteps(HookHelper hookHelper)
     {

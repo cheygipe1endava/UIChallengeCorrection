@@ -27,12 +27,12 @@ public class LoginSteps {
         homePage.openLoginFormOverlay();
     }
 
-    @When("^the user types in invalid credentials for username and password$")
-    public void theUserTypesInInvalidCredentialsForUsernameAndPassword(DataTable fields)
+    @When("^the user types in its credentials for username and password$")
+    public void theUserTypesInItsCredentialsForUsernameAndPassword(DataTable fields)
     {
         homePage.processDataTable(fields);
-        homePage.invalidEmailInsert();
-        homePage.invalidPasswordInsert();
+        homePage.EmailInsert();
+        homePage.PasswordInsert();
     }
 
     @And("^clicks login button$")
@@ -45,14 +45,6 @@ public class LoginSteps {
     public void thePageShowsErrorWithEmailPasswordToTheUser()
     {
         Assert.assertTrue("Error: Invalid email or password, please check your credentials", homePage.invalidLogin());
-    }
-
-    @When("^the user types in valid credentials for username and password$")
-    public void theUserTypesInValidCredentialsForUsernameAndPassword(DataTable fields)
-    {
-        homePage.processDataTable(fields);
-        homePage.validEmailInsert();
-        homePage.validPasswordInsert();
     }
 
     @Then("^the user should be signed in$")
