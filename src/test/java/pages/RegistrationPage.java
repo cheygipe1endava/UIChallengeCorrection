@@ -10,6 +10,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.regex.Pattern;
+
 import static org.awaitility.Awaitility.await;
 
 public class RegistrationPage extends BasePage{
@@ -37,6 +39,7 @@ public class RegistrationPage extends BasePage{
     private By agreeTermsCheckBox = By.id("agreelegaleId");
     private By saveButton = By.id("boton_Ar");
     private By emptyCellphoneMessage = By.id("mensajeCelVacio");
+    private By notMatchingPasswords = By.id("mensajeClave2Incorrecto2");
     private By findFemaleButton = By.xpath("//*[@id='tipodireccion_0' and @value='female']");
 
     public RegistrationPage(WebDriver webDriver)
@@ -136,14 +139,38 @@ public class RegistrationPage extends BasePage{
         webDriver.findElement(saveButton).click();
     }
 
-    public boolean registrationCellphoneNotFound()
+    public boolean warningFieldsDisplayed(By emptyMessageLocator)
     {
-        boolean cellphoneEmptyMessage = false;
-        if(webDriver.findElement(emptyCellphoneMessage).isDisplayed())
+        boolean emptyField = false;
+        if(webDriver.findElement(emptyMessageLocator).isDisplayed())
         {
-            cellphoneEmptyMessage = true;
+            emptyField = true;
 
         }
-        return cellphoneEmptyMessage;
+        return emptyField;
+    }
+
+    public boolean verifyNumbersInNameAndLastNames()
+    {
+        boolean verifyNumsInNameAndLastName = false;
+        String nameText = webDriver.findElement(user).getAttribute("value");
+        String fatherLastNameText = webDriver.findElement(fatherLastName).getAttribute("value");
+        String motherLastNameText = webDriver.findElement(motherLastName).getAttribute("value");
+        if(nameText.matches(".*\\d.*") || fatherLastNameText.matches(".*\\d.*")
+                || motherLastNameText.matches(".*\\d.*"))
+        {
+            verifyNumsInNameAndLastName = true;
+        }
+        return verifyNumsInNameAndLastName;
+    }
+
+    public boolean registrationCellphoneNotFound()
+    {
+        return warningFieldsDisplayed(emptyCellphoneMessage);
+    }
+
+    public boolean notMatchingPasswordsMessage()
+    {
+        return warningFieldsDisplayed(notMatchingPasswords);
     }
 }

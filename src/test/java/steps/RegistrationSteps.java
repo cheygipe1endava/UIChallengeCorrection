@@ -44,10 +44,26 @@ public class RegistrationSteps{
         registrationPage.saveButtonClick();
     }
 
-    @Then("web page displays error message to the user")
-    public void webPageDisplaysErrorMessageToTheUser()
+    @Then("^web page displays error message to the user with empty cellphone field$")
+    public void webPageDisplaysErrorMessageToTheUserWithEmptyCellphoneField()
     {
         Assert.assertTrue("Error: Cellphone field is empty",
                 registrationPage.registrationCellphoneNotFound());
+    }
+
+    @Then("^web page displays error message for not matching passwords and empty cellphone field to the user$")
+    public void webPageDisplaysErrorMessageForNotMatchingPasswordsAndEmptyCellphoneFieldToTheUser()
+    {
+        Assert.assertTrue("Error: Cellphone field is empty",
+                registrationPage.registrationCellphoneNotFound());
+        Assert.assertTrue("Error: Cellphone field is empty",
+                registrationPage.notMatchingPasswordsMessage());
+    }
+
+    @And("^name and last names does not have any number$")
+    public void nameAndLastNamesDoesNotHaveAnyNumber()
+    {
+        Assert.assertFalse("Error: Name/Last name cannot have any number on it",
+                registrationPage.verifyNumbersInNameAndLastNames());
     }
 }
