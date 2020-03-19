@@ -16,14 +16,16 @@ public class ProductPage extends BasePage
     private List<WebElement> productResults;
     private By productsCatalog = By.id("testId-searchResults-products");
     private By priceButton = By.id("testId-Accordion-Precio");
-    private By filtersField = By.className("jsx-4207689641");
+    private By filtersField = By.xpath("//div[@class='jsx-4207689641']");
     private By applyFilterButton = By.className("jsx-3084763500");
+    private By disabledApplyFilterButton = By.xpath("//*[@class='jsx-3084763500' and @disabled]");
     private By productPageLoad = By.xpath("//*[@class='jsx-1987097504 main']");
-    private By minPrice = By.xpath("//*[@id='testId-range-from']");
-    private By maxPrice = By.xpath("//*[@id='testId-range-to']");
+    private By minPrice = By.xpath("//*[@class='jsx-1982563899 input-wrapper ']/input[@id='testId-range-from']");
+    private By maxPrice = By.xpath("//*[@class='jsx-1982563899 input-wrapper ']/input[@id='testId-range-to']");
     private By appliedFiltersField = By.xpath("//*[@class='jsx-2293612498 selected-filters']");
     private By priceFilterFields = By.xpath("//*[@class='jsx-3109751039 pod-group--filters']");
     private By appliedPriceFilterText = By.xpath("//*[@class='jsx-2293612498 chips']");
+    private By wrongPriceRange = By.xpath("//*[@class='jsx-3084763500 error-text']");
     private By productResultList = By.xpath("//*[@class='jsx-1395131234 search-results-4-grid']");
     private By sellingBrand = By.xpath("//*[@class='jsx-3572928369 product-brand fa--brand']");
     private By objectName = By.xpath("//*[@class='jsx-3686231685 product-name fa--product-name']");
@@ -38,7 +40,7 @@ public class ProductPage extends BasePage
     {
         super(webDriver);
         this.webDriver = webDriver;
-        wait = new WebDriverWait(webDriver,Long.parseLong("5"));
+        wait = new WebDriverWait(webDriver,Long.parseLong("10"));
     }
 
     public boolean confirmSearchPage(String searchProduct)
@@ -77,6 +79,28 @@ public class ProductPage extends BasePage
             priceFilterApplied = true;
         }
         return priceFilterApplied;
+    }
+
+    public boolean wrongPriceFilterRange()
+    {
+        boolean verifyPriceRange = false;
+        wait.until(ExpectedConditions.visibilityOfElementLocated(wrongPriceRange));
+        if(webDriver.findElement(wrongPriceRange).isDisplayed())
+        {
+            verifyPriceRange = true;
+        }
+        return verifyPriceRange;
+    }
+
+    public boolean disabledApplyFilterButton()
+    {
+        boolean verifyDisabledApplyFilterButton = false;
+        wait.until(ExpectedConditions.visibilityOfElementLocated(disabledApplyFilterButton));
+        if(webDriver.findElement(disabledApplyFilterButton).isDisplayed())
+        {
+            verifyDisabledApplyFilterButton = true;
+        }
+        return verifyDisabledApplyFilterButton;
     }
 
     public void clickFirstMatch()

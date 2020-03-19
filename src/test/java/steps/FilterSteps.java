@@ -54,4 +54,16 @@ public class FilterSteps {
         Assert.assertTrue("Successfully applied price filter from " + minimumPrice + "to " + maximumPrice,
                 productPage.priceFilterApplied(minimumPrice, maximumPrice));
     }
+
+    @Then("^the page shows error with wrong price range$")
+    public void thePageShowsErrorWithWrongPriceRange()
+    {
+        Assert.assertTrue("Error: Wrong price range, please type a valid one", productPage.wrongPriceFilterRange());
+    }
+
+    @Then("^the user cannot click a disabled apply filter button$")
+    public void theUserCannotClickADisabledApplyFilterButton()
+    {
+        Assert.assertFalse("Error: Empty price ranges", productPage.disabledApplyFilterButton());
+    }
 }
