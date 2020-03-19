@@ -52,4 +52,22 @@ public class LoginSteps {
     {
         Assert.assertTrue("Successfully logged in", homePage.userLoggedIn());
     }
+
+    @Then("^user cannot click disabled login button$")
+    public void userCannotClickDisabledLoginButton()
+    {
+        Assert.assertFalse("Error: Invalid email or password, please check your credentials", homePage.disabledLoginButton());
+    }
+
+    @And("^the page shows error with blank email field$")
+    public void thePageShowsErrorWithBlankEmailField()
+    {
+        Assert.assertTrue("Error: Blank email field, please enter your email ", homePage.emptyEmailWarning());
+    }
+
+    @And("^the page shows error with wrong password format$")
+    public void thePageShowsErrorWithWrongPasswordFormat()
+    {
+        Assert.assertTrue("Error: Blank email field, please enter your email ", homePage.wrongPasswordFormat());
+    }
 }

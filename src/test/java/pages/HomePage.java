@@ -22,8 +22,11 @@ public class HomePage extends BasePage{
     private By invalidLoginMessage = By.className("Login__message__3fDqw");
     private By accountDropDown = By.className("fb-masthead__dropdown__menu");
     private By passwordField = By.xpath("//input[@type='password']");
-    private By findLoginButton = By.xpath("//*[contains(text(), 'Iniciar')]/.");
+    private By findLoginButton = By.xpath("//button[@class='Button__main__1NDc9 Button__green__1fhy5']");
+    private By findDisabledLoginButton = By.xpath("//button[@class='Button__main__1NDc9 Button__disabled__RnNv9']");
     private By loginText = By.xpath("//*[@class='fb-masthead-login__name re-design-cl__name']");
+    private By emptyEmailField = By.xpath("//p[@class='InputText__message__2FAtZ']");
+    private By wrongPassFormat = By.xpath("//p[@class='InputPassword__message__3ELVm']");
     private By findLogoutElement = By.xpath
             ("//*[@class='fb-filter-header__list']/li[@class='fb-filter-header__list-item']/a[text()='Cerrar sesión']");
     private By findLoginDivText = By.xpath
@@ -60,6 +63,38 @@ public class HomePage extends BasePage{
     public void loginButton()
     {
         webDriver.findElement(findLoginButton).click();
+    }
+
+    public boolean disabledLoginButton()
+    {
+        boolean checkEnabledLoginButton = false;
+        if(webDriver.findElement(findDisabledLoginButton).isEnabled())
+        {
+            checkEnabledLoginButton = true;
+        }
+        return checkEnabledLoginButton;
+    }
+
+    public boolean emptyEmailWarning()
+    {
+        boolean verifyEmptyEmailWarning = false;
+        wait.until(ExpectedConditions.visibilityOfElementLocated(emptyEmailField));
+        if(webDriver.findElement(emptyEmailField).isDisplayed())
+        {
+            verifyEmptyEmailWarning = true;
+        }
+        return verifyEmptyEmailWarning;
+    }
+
+    public boolean wrongPasswordFormat()
+    {
+        boolean verifyPasswordLength = false;
+        wait.until(ExpectedConditions.visibilityOfElementLocated(wrongPassFormat));
+        if(webDriver.findElement(wrongPassFormat).isDisplayed())
+        {
+            verifyPasswordLength = true;
+        }
+        return verifyPasswordLength;
     }
 
     public boolean invalidLogin()
