@@ -64,6 +64,6 @@ public class FilterSteps {
     @Then("^the user cannot click a disabled apply filter button$")
     public void theUserCannotClickADisabledApplyFilterButton()
     {
-        Assert.assertFalse("Error: Empty price ranges", productPage.disabledApplyFilterButton());
+        Assert.assertTrue("Error: Empty price ranges", productPage.disabledApplyFilterButton());
     }
 }

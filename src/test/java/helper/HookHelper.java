@@ -10,7 +10,8 @@ public class HookHelper {
     private WebDriver webDriver;
 
     @Before
-    public void setUp() {
+    public void setUp()
+    {
         if (webDriver == null) {
             webDriver = new ChromeDriver();
         }
@@ -18,16 +19,15 @@ public class HookHelper {
         webDriver.get("https://www.falabella.com.co/falabella-co/");
     }
 
-    public WebDriver getWebDriver() {
+    public WebDriver getWebDriver()
+    {
         return webDriver;
     }
 
-    /*
     @After
-    public void tearDown() {
+    public void tearDown()
+    {
         webDriver.quit();
     }
-
-     */
 }
 

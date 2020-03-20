@@ -7,9 +7,12 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.And;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import pages.HomePage;
 import pages.ProductPage;
 import pages.ShoppingBagPage;
+
+import java.util.List;
 
 public class AddToShoppingBagSteps {
 
@@ -17,6 +20,7 @@ public class AddToShoppingBagSteps {
     private HomePage homePage;
     private ShoppingBagPage shoppingBagPage;
     private ProductPage productPage;
+    private String firstMatchText;
 
     public AddToShoppingBagSteps(HookHelper hookHelper)
     {
@@ -37,9 +41,7 @@ public class AddToShoppingBagSteps {
     @Given("^the user is in a product page$")
     public void theUserIsInAProductPage()
     {
-        homePage = new HomePage(webDriver);
-        productPage = new ProductPage(webDriver);
-        shoppingBagPage = new ShoppingBagPage(webDriver);
+        productPage.confirmFirstMatchPage();
         Assert.assertTrue("Successfully applied price filter from", productPage.confirmFirstMatchPage());
     }
 

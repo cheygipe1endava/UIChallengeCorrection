@@ -6,12 +6,19 @@ import io.cucumber.java.en.And;
 import helper.HookHelper;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import pages.HomePage;
+import pages.ProductPage;
+import pages.ShoppingBagPage;
+
+import java.util.List;
 
 public class GeneralSteps
 {
     private WebDriver webDriver;
     private HomePage homePage;
+    private ProductPage productPage;
+    private ShoppingBagPage shoppingBagPage;
 
     public GeneralSteps(HookHelper hookHelper)
     {
