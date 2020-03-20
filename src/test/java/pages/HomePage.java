@@ -21,16 +21,16 @@ public class HomePage extends BasePage{
     private By loginFields = By.className("Modal__modalcontent__2yJz6");
     private By invalidLoginMessage = By.className("Login__message__3fDqw");
     private By accountDropDown = By.className("fb-masthead__dropdown__menu");
-    private By passwordField = By.xpath("//input[@type='password']");
-    private By findLoginButton = By.xpath("//button[@class='Button__main__1NDc9 Button__green__1fhy5']");
-    private By findDisabledLoginButton = By.xpath("//button[@class='Button__main__1NDc9 Button__disabled__RnNv9']");
+    private By passwordField = By.xpath("//*[@type='password']");
+    private By findLoginButton = By.xpath("//*[@class='Button__main__1NDc9 Button__green__1fhy5']");
+    private By findDisabledLoginButton = By.xpath("//*[@class='Button__main__1NDc9 Button__disabled__RnNv9']");
     private By loginText = By.xpath("//*[@class='fb-masthead-login__name re-design-cl__name']");
-    private By emptyEmailField = By.xpath("//p[@class='InputText__message__2FAtZ']");
-    private By wrongPassFormat = By.xpath("//p[@class='InputPassword__message__3ELVm']");
+    private By emptyEmailField = By.xpath("//*[@class='InputText__message__2FAtZ']");
+    private By wrongPassFormat = By.xpath("//*[@class='InputPassword__message__3ELVm']");
     private By findLogoutElement = By.xpath
-            ("//li[@class='fb-filter-header__list-item']/a[@href='#']");
+            ("//*[@class='fb-filter-header__list-item']//a[@href='#']");
     private By findLoginDivText = By.xpath
-            ("//*[@class='Login__mobileValidations__2b6z- fb-masthead-login__user-info__logged']/div[@class='fb-masthead-login__user-info']");
+            ("//*[@class='Login__mobileValidations__2b6z- fb-masthead-login__user-info__logged']//div[@class='fb-masthead-login__user-info']");
 
     public HomePage(WebDriver webDriver)
     {
@@ -47,6 +47,10 @@ public class HomePage extends BasePage{
     public void openLoginFormOverlay()
     {
         webDriver.findElement(loginDiv).click();
+        if(!webDriver.findElement(loginFields).isDisplayed())
+        {
+            webDriver.findElement(loginDiv).click();
+        }
     }
 
     public void EmailInsert()

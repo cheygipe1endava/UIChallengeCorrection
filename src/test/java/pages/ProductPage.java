@@ -17,22 +17,21 @@ public class ProductPage extends BasePage
     private By productsCatalog = By.id("testId-searchResults-products");
     private By priceButton = By.id("testId-Accordion-Precio");
     private By applyFilterButton = By.className("jsx-3084763500");
-    private By minPrice = By.id("testId-range-from");
-    private By maxPrice = By.id("testId-range-to");
+    private By minPrice = By.xpath("//*[@id='testId-range-from']");
+    private By maxPrice = By.xpath("//*[@id='testId-range-to']");
     private By disabledApplyFilterButton = By.xpath("//*[@class='jsx-3084763500' and @disabled]");
     private By productPageLoad = By.xpath("//*[@class='jsx-1987097504 main']");
     private By appliedFiltersField = By.xpath("//*[@class='jsx-2293612498 selected-filters']");
-    private By appliedPriceFilterText = By.xpath("//*[@class='jsx-2293612498 chips']");
     private By wrongPriceRange = By.xpath("//*[@class='jsx-3084763500 error-text']");
     private By productResultList = By.xpath("//*[@class='jsx-1395131234 search-results-4-grid']");
     private By sellingBrand = By.xpath("//*[@class='jsx-3572928369 product-brand fa--brand']");
     private By objectName = By.xpath("//*[@class='jsx-3686231685 product-name fa--product-name']");
-    private By addToCartButton = By.xpath("//*[@id='buttonForCustomers']/button[@class]");
+    private By addToCartButton = By.xpath("//*[@id='buttonForCustomers']//button[@class]");
     private By popUpAddedToCart = By.xpath("//*[@class='jsx-3049166186 popup small']");
     private By confirmProductAdded = By.xpath("//*[@class='jsx-351245194 item-info']");
-    private By goToShoppingBagButton = By.xpath("//*[@class='jsx-3049166186 sub-footer']/div[@class='jsx-3049166186 addToCart-btn']");
+    private By goToShoppingBagButton = By.xpath("//*[@class='jsx-3049166186 sub-footer']//div[@class='jsx-3049166186 addToCart-btn']");
     private By shoppingCart = By.xpath("//*[@id='testId-userActions-basket']" +
-            "/div[@class='jsx-2422992112 content-wrapper']/a[@class='jsx-2422992112']/i[@data-count]");
+            "//div[@class='jsx-2422992112 content-wrapper']//a[@class='jsx-2422992112']//i[@data-count]");
 
     public ProductPage(WebDriver webDriver)
     {
@@ -72,12 +71,11 @@ public class ProductPage extends BasePage
         webDriver.findElement(applyFilterButton).findElement(By.tagName("i")).click();
     }
 
-    public boolean priceFilterApplied(String minimumPrice, String maximumPrice)
+    public boolean priceFilterApplied()
     {
         boolean priceFilterApplied = false;
         wait.until(ExpectedConditions.visibilityOfElementLocated(appliedFiltersField));
-        String getPriceFilterText = webDriver.findElement(appliedPriceFilterText).getText();
-        if (getPriceFilterText.contains(minimumPrice) && getPriceFilterText.contains(maximumPrice))
+        if (webDriver.findElement(appliedFiltersField).isDisplayed())
         {
             priceFilterApplied = true;
         }

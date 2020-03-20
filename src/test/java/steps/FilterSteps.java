@@ -48,11 +48,11 @@ public class FilterSteps {
         productPage.priceFilter(minimumPrice, maximumPrice);
     }
 
-    @Then("^the user should only see products with prices \"([^\"]*)\" and \"([^\"]*)\" in this range$")
-    public void theUserShouldOnlySeeProductsWithPricesAndInThisRange(String minimumPrice, String maximumPrice)
+    @Then("the user should only see products with prices in the input range range")
+    public void theUserShouldOnlySeeProductsWithPricesInTheInputRangeRange()
     {
-        Assert.assertTrue("Successfully applied price filter from " + minimumPrice + "to " + maximumPrice,
-                productPage.priceFilterApplied(minimumPrice, maximumPrice));
+        Assert.assertTrue("Successfully applied price filter",
+                productPage.priceFilterApplied());
     }
 
     @Then("^the page shows error with wrong price range$")

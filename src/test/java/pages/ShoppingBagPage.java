@@ -10,7 +10,7 @@ public class ShoppingBagPage extends BasePage
     private WebDriver webDriver;
     private WebDriverWait wait;
     private By productsInBag = By.className("fb-product-item");
-    private By deleteProduct = By.xpath("//*[@class='fb-prod-actionButton']/a[text()='Eliminar']");
+    private By deleteProduct = By.xpath("//*[@class='fb-prod-actionButton']//a[text()='Eliminar']");
     private By emptyBag = By.xpath("//*[@class='fb-order-status__empty-basket']");
 
     public ShoppingBagPage(WebDriver webDriver)
