@@ -3,51 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7be9d565-1abe-42cb-9363-25b85d6167fd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/ProductPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/ProductPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/ShoppingBagPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/ShoppingBagPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/steps/FilterSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/FilterSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Filter.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Filter.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/UIAutomationCH-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cucumber/cucumber-html-reports/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cucumber/cucumber-html-reports/css/cucumber.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cucumber/cucumber-html-reports/css/font-awesome.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cucumber/cucumber-html-reports/fonts/FontAwesome.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cucumber/cucumber-html-reports/fonts/fontawesome-webfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cucumber/cucumber-html-reports/fonts/fontawesome-webfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cucumber/cucumber-html-reports/fonts/fontawesome-webfont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cucumber/cucumber-html-reports/fonts/fontawesome-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cucumber/cucumber-html-reports/fonts/fontawesome-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cucumber/cucumber-html-reports/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cucumber/cucumber-html-reports/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cucumber/cucumber-html-reports/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cucumber/cucumber-html-reports/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cucumber/cucumber-html-reports/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cucumber/cucumber-html-reports/images/favicon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cucumber/cucumber-html-reports/js/Chart.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cucumber/cucumber-html-reports/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cucumber/cucumber-html-reports/js/jquery.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cucumber/cucumber-html-reports/js/jquery.tablesorter.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cucumber/cucumber-html-reports/js/moment.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cucumber/cucumber-html-reports/overview-failures.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cucumber/cucumber-html-reports/overview-features.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cucumber/cucumber-html-reports/overview-steps.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cucumber/cucumber-html-reports/overview-tags.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cucumber/cucumber-html-reports/report-feature_1764534172.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-runner.TestRunner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/runner.TestRunner.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/features/Filter.feature" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/features/Filter.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/features/Search.feature" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/features/Search.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/helper/HookHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/helper/HookHelper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/HomePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/HomePage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/ProductPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/ProductPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/ShoppingBagPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/ShoppingBagPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/runner/TestRunner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/runner/TestRunner.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/steps/AddToShoppingBagSteps.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/steps/AddToShoppingBagSteps.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/steps/FilterSteps.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/steps/FilterSteps.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/steps/GeneralSteps.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/steps/GeneralSteps.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/BasePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/BasePage.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +49,7 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
-  <component name="RunManager" selected="Cucumber java.Scenario: The user can filter by object price with only final price">
+  <component name="RunManager" selected="Cucumber java.Scenario: The user unsuccessfully register in Falabella's web page">
     <configuration name="Feature: DeleteFromShoppingBag" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/DeleteFromShoppingBag.feature" />
@@ -112,14 +68,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Feature: Login" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Feature: Logout" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/Login.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/Logout.feature" />
       <option name="GLUE" value="helper steps" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="untitled" />
       <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
-      <option name="SUGGESTED_NAME" value="Feature: Login" />
+      <option name="SUGGESTED_NAME" value="Feature: Logout" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="io.cucumber.core.cli.*" />
@@ -149,15 +105,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: The user needs to add a product to the shopping bag" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: The user unsuccessfully register in Falabella's web page" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/AddToShoppingBag.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/Registration.feature" />
       <option name="GLUE" value="helper steps" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="untitled" />
-      <option name="NAME_FILTER" value="^The user needs to add a product to the shopping bag$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^The user needs to add a product to the shopping bag$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: The user needs to add a product to the shopping bag" />
+      <option name="NAME_FILTER" value="^The user unsuccessfully register in Falabella\'s web page$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^The user unsuccessfully register in Falabella\'s web page$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: The user unsuccessfully register in Falabella's web page" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="io.cucumber.core.cli.*" />
@@ -189,11 +145,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Cucumber java.Scenario: The user unsuccessfully register in Falabella's web page" />
+        <item itemvalue="Cucumber java.Feature: DeleteFromShoppingBag" />
+        <item itemvalue="Cucumber java.Feature: Logout" />
         <item itemvalue="Cucumber java.Scenario: The user can filter by object price with only final price" />
         <item itemvalue="Cucumber java.Scenario: The user unsuccessfully signs in Falabella's web page with blank fields" />
-        <item itemvalue="Cucumber java.Feature: DeleteFromShoppingBag" />
-        <item itemvalue="Cucumber java.Scenario: The user needs to add a product to the shopping bag" />
-        <item itemvalue="Cucumber java.Feature: Login" />
       </list>
     </recent_temporary>
   </component>
@@ -215,10 +171,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="708" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1584140899425" />
-    <state x="491" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1584396190431">
+    <state x="491" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1584744999924">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="491" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584396190431" />
+    <state x="491" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584744999924" />
     <state x="1380" y="389" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1584130347976">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -231,22 +187,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1584728166167" />
-    <state width="1877" height="263" key="GridCell.Tab.0.bottom" timestamp="1584742819657">
+    <state width="1877" height="263" key="GridCell.Tab.0.bottom" timestamp="1584745027570">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="263" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584742819657" />
-    <state width="1877" height="263" key="GridCell.Tab.0.center" timestamp="1584742819657">
+    <state width="1877" height="263" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584745027570" />
+    <state width="1877" height="263" key="GridCell.Tab.0.center" timestamp="1584745027570">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="263" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584742819657" />
-    <state width="1877" height="263" key="GridCell.Tab.0.left" timestamp="1584742819656">
+    <state width="1877" height="263" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584745027570" />
+    <state width="1877" height="263" key="GridCell.Tab.0.left" timestamp="1584745027570">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="263" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584742819656" />
-    <state width="1877" height="263" key="GridCell.Tab.0.right" timestamp="1584742819657">
+    <state width="1877" height="263" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584745027570" />
+    <state width="1877" height="263" key="GridCell.Tab.0.right" timestamp="1584745027570">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="263" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584742819657" />
+    <state width="1877" height="263" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584745027570" />
     <state width="1877" height="314" key="GridCell.Tab.1.bottom" timestamp="1584742358076">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

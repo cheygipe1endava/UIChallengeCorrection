@@ -1,7 +1,7 @@
 package pages;
 
 import io.cucumber.datatable.DataTable;
-import entities.Register;
+import utils.RegisterUtil;
 import org.awaitility.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -13,7 +13,7 @@ import static org.awaitility.Awaitility.await;
 
 public class RegistrationPage extends BasePage{
 
-    private Register register;
+    private RegisterUtil registerUtil;
     private WebDriver webDriver;
     private WebElement termsCheckbox;
     private WebDriverWait wait;
@@ -48,7 +48,7 @@ public class RegistrationPage extends BasePage{
 
     public void processDataTable(DataTable fields)
     {
-        register = new Register(fields);
+        registerUtil = new RegisterUtil(fields);
     }
 
     public void searchRegister ()
@@ -61,43 +61,43 @@ public class RegistrationPage extends BasePage{
     public void insertName()
     {
         wait.until(ExpectedConditions.visibilityOfElementLocated(registerForm));
-        clickAndSendData(user, register.getName());
+        clickAndSendData(user, registerUtil.getName());
 
     }
 
     public void insertFatherLastName()
     {
-        clickAndSendData(fatherLastName, register.getFirstLastName());
+        clickAndSendData(fatherLastName, registerUtil.getFirstLastName());
     }
 
     public void insertMotherLastName()
     {
-        clickAndSendData(motherLastName, register.getSecondLastName());
+        clickAndSendData(motherLastName, registerUtil.getSecondLastName());
     }
 
     public void emailInsert()
     {
-        clickAndSendData(mail, register.getEmail());
+        clickAndSendData(mail, registerUtil.getEmail());
     }
 
     public void passwordAndConfirmationInsert()
     {
-        clickAndSendData(password, register.getPassword());
-        clickAndSendData(confirmPass, register.getConfirmPassword());
+        clickAndSendData(password, registerUtil.getPassword());
+        clickAndSendData(confirmPass, registerUtil.getConfirmPassword());
     }
 
     public void selectDropDowns()
     {
-        new Select(webDriver.findElement(status)).selectByVisibleText(register.getCountry());
-        new Select(webDriver.findElement(document)).selectByValue(register.getDocumentType());
-        new Select(webDriver.findElement(day)).selectByVisibleText(register.getDay());
-        new Select(webDriver.findElement(month)).selectByVisibleText(register.getMonth());
-        new Select(webDriver.findElement(year)).selectByVisibleText(register.getYear());
+        new Select(webDriver.findElement(status)).selectByVisibleText(registerUtil.getCountry());
+        new Select(webDriver.findElement(document)).selectByValue(registerUtil.getDocumentType());
+        new Select(webDriver.findElement(day)).selectByVisibleText(registerUtil.getDay());
+        new Select(webDriver.findElement(month)).selectByVisibleText(registerUtil.getMonth());
+        new Select(webDriver.findElement(year)).selectByVisibleText(registerUtil.getYear());
     }
 
     public void documentNumInsert()
     {
-        clickAndSendData(documentNum, register.getDocumentNum());
+        clickAndSendData(documentNum, registerUtil.getDocumentNum());
     }
 
     public void genderSelection()

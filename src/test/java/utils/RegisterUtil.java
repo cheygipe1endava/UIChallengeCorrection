@@ -1,13 +1,13 @@
-package entities;
+package utils;
 
 import io.cucumber.datatable.DataTable;
 import java.util.List;
 
-public class Register
+public class RegisterUtil
 {
     private List<List<String>> dataTable;
 
-    public Register(DataTable fields)
+    public RegisterUtil(DataTable fields)
     {
         dataTable = fields.cells();
     }
