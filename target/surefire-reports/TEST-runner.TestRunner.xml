@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="8" failures="0" name="runner.TestRunner" time="133.229" errors="0" skipped="0">
+<testsuite tests="20" failures="0" name="runner.TestRunner" time="435.229" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="13.0.2+8"/>
@@ -60,12 +60,24 @@
     <property name="sun.stdout.encoding" value="cp850"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="Login" name="The user unsuccessfully signs in Falabella&apos;s web page with both wrong credentials" time="18.455"/>
-  <testcase classname="Login" name="The user unsuccessfully signs in Falabella&apos;s web page with wrong password" time="16.771"/>
-  <testcase classname="Login" name="The user unsuccessfully signs in Falabella&apos;s web page with wrong email" time="17.342"/>
-  <testcase classname="Login" name="The user unsuccessfully signs in Falabella&apos;s web page with blank fields" time="12.429"/>
-  <testcase classname="Login" name="The user unsuccessfully signs in Falabella&apos;s web page with email as blank field" time="13.403"/>
-  <testcase classname="Login" name="The user unsuccessfully signs in Falabella&apos;s web page with password as blank field" time="12.213"/>
-  <testcase classname="Login" name="The user unsuccessfully signs in Falabella&apos;s web page with password not meeting the required eight characters format" time="18.678"/>
-  <testcase classname="Login" name="The user successfully signs in Falabella&apos;s web page" time="23.938"/>
+  <testcase classname="Add to shopping cart" name="The user needs to add a product to the shopping bag" time="49.59"/>
+  <testcase classname="Delete from the shopping cart" name="The user needs to delete a product from the shopping bag" time="31.431"/>
+  <testcase classname="Filter" name="The user needs to filter by object price" time="22.985"/>
+  <testcase classname="Filter" name="The user cannot filter by object price with a lower final price" time="20.956"/>
+  <testcase classname="Filter" name="The user cannot filter by object price with empty price fields" time="16.618"/>
+  <testcase classname="Filter" name="The user can filter by object price with only initial price" time="21.375"/>
+  <testcase classname="Filter" name="The user can filter by object price with only final price" time="19.457"/>
+  <testcase classname="Login" name="The user unsuccessfully signs in Falabella&apos;s web page with both wrong credentials" time="17.52"/>
+  <testcase classname="Login" name="The user unsuccessfully signs in Falabella&apos;s web page with wrong password" time="20.664"/>
+  <testcase classname="Login" name="The user unsuccessfully signs in Falabella&apos;s web page with wrong email" time="19.256"/>
+  <testcase classname="Login" name="The user unsuccessfully signs in Falabella&apos;s web page with blank fields" time="16.722"/>
+  <testcase classname="Login" name="The user unsuccessfully signs in Falabella&apos;s web page with email as blank field" time="15.979"/>
+  <testcase classname="Login" name="The user unsuccessfully signs in Falabella&apos;s web page with password as blank field" time="15.719"/>
+  <testcase classname="Login" name="The user unsuccessfully signs in Falabella&apos;s web page with password not meeting the required eight characters format" time="15.338"/>
+  <testcase classname="Login" name="The user successfully signs in Falabella&apos;s web page" time="21.096"/>
+  <testcase classname="Logout" name="The user successfully signs out of Falabella&apos;s web page" time="21.848"/>
+  <testcase classname="Registration" name="The user unsuccessfully register in Falabella&apos;s web page" time="23.421"/>
+  <testcase classname="Registration" name="The user unsuccessfully register in Falabella&apos;s web page with numbers in name and last names fields" time="22.986"/>
+  <testcase classname="Registration" name="The user unsuccessfully register in Falabella&apos;s web page with no matching passwords" time="23.883"/>
+  <testcase classname="Search" name="The user searches for &quot;cremas&quot; in Falabella&apos;s web page" time="18.385"/>
 </testsuite>
