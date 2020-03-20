@@ -1,6 +1,6 @@
 package pages;
 
-import cucumber.api.DataTable;
+import io.cucumber.datatable.DataTable;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -28,7 +28,7 @@ public class HomePage extends BasePage{
     private By emptyEmailField = By.xpath("//p[@class='InputText__message__2FAtZ']");
     private By wrongPassFormat = By.xpath("//p[@class='InputPassword__message__3ELVm']");
     private By findLogoutElement = By.xpath
-            ("//*[@class='fb-filter-header__list']/li[@class='fb-filter-header__list-item']/a[text()='Cerrar sesión']");
+            ("//li[@class='fb-filter-header__list-item']/a[@href='#']");
     private By findLoginDivText = By.xpath
             ("//*[@class='Login__mobileValidations__2b6z- fb-masthead-login__user-info__logged']/div[@class='fb-masthead-login__user-info']");
 
@@ -36,12 +36,12 @@ public class HomePage extends BasePage{
     {
         super(webDriver);
         this.webDriver = webDriver;
-        wait = new WebDriverWait(webDriver, Long.parseLong("10"));
+        wait = new WebDriverWait(webDriver, Long.parseLong("15"));
     }
 
     public void processDataTable(DataTable fields)
     {
-        dataTable = fields.raw();
+        dataTable = fields.cells();
     }
 
     public void openLoginFormOverlay()
@@ -52,12 +52,20 @@ public class HomePage extends BasePage{
     public void EmailInsert()
     {
         wait.until(ExpectedConditions.visibilityOfElementLocated(loginFields));
-        clickAndSendData(emailInput, dataTable.get(0).get(1));
+        if(dataTable.get(0).get(1) != null)
+        {
+            clickAndSendData(emailInput, dataTable.get(0).get(1));
+        }
+        clickAndSendData(emailInput, "");
     }
 
     public void PasswordInsert()
     {
-        clickAndSendData(passwordField, dataTable.get(1).get(1));
+        if(dataTable.get(1).get(1) != null)
+        {
+            clickAndSendData(passwordField, dataTable.get(1).get(1));
+        }
+        clickAndSendData(passwordField, "");
     }
 
     public void loginButton()
@@ -99,8 +107,7 @@ public class HomePage extends BasePage{
 
     public boolean invalidLogin()
     {
-        WebDriverWait waitInvalidMessage = new WebDriverWait(webDriver,Long.parseLong("10"));
-        WebElement incorrectCredentials = waitInvalidMessage.until(ExpectedConditions.
+        WebElement incorrectCredentials = wait.until(ExpectedConditions.
                 visibilityOfElementLocated(invalidLoginMessage));
         return incorrectCredentials.isEnabled();
     }

@@ -29,7 +29,6 @@ Feature: Login
     When the user types in its credentials for username and password
       | email    |  |
       | password |  |
-    And clicks login button
     Then user cannot click disabled login button
 
   Scenario: The user unsuccessfully signs in Falabella's web page with email as blank field
@@ -37,7 +36,6 @@ Feature: Login
     When the user types in its credentials for username and password
       | email    |                  |
       | password | sD4eMa9TKtsFdJGs |
-    And clicks login button
     Then user cannot click disabled login button
     And the page shows error with blank email field
 
@@ -46,7 +44,6 @@ Feature: Login
     When the user types in its credentials for username and password
       | email    | testdummy4785692@gmail.com |
       | password |                            |
-    And clicks login button
     Then user cannot click disabled login button
 
   Scenario: The user unsuccessfully signs in Falabella's web page with password not meeting the required eight characters format

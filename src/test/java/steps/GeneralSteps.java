@@ -1,8 +1,8 @@
 package steps;
 
-import cucumber.api.DataTable;
-import cucumber.api.java.en.And;
-import cucumber.api.java.en.Given;
+import io.cucumber.datatable.DataTable;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.And;
 import helper.HookHelper;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;

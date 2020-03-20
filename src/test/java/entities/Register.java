@@ -1,6 +1,6 @@
 package entities;
 
-import cucumber.api.DataTable;
+import io.cucumber.datatable.DataTable;
 import java.util.List;
 
 public class Register
@@ -9,7 +9,7 @@ public class Register
 
     public Register(DataTable fields)
     {
-        dataTable = fields.raw();
+        dataTable = fields.cells();
     }
 
     public String getName() {return dataTable.get(0).get(1);}

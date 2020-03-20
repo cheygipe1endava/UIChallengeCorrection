@@ -1,6 +1,6 @@
 package pages;
 
-import cucumber.api.DataTable;
+import io.cucumber.datatable.DataTable;
 import entities.Register;
 import org.awaitility.Duration;
 import org.openqa.selenium.By;
@@ -9,9 +9,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.util.regex.Pattern;
-
 import static org.awaitility.Awaitility.await;
 
 public class RegistrationPage extends BasePage{
@@ -46,7 +43,7 @@ public class RegistrationPage extends BasePage{
     {
         super(webDriver);
         this.webDriver = webDriver;
-        wait = new WebDriverWait(webDriver,Long.parseLong("5"));
+        wait = new WebDriverWait(webDriver,Long.parseLong("15"));
     }
 
     public void processDataTable(DataTable fields)
@@ -141,6 +138,7 @@ public class RegistrationPage extends BasePage{
 
     public boolean warningFieldsDisplayed(By emptyMessageLocator)
     {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(emptyMessageLocator));
         boolean emptyField = false;
         if(webDriver.findElement(emptyMessageLocator).isDisplayed())
         {

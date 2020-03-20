@@ -17,7 +17,7 @@ public class ShoppingBagPage extends BasePage
     {
         super(webDriver);
         this.webDriver = webDriver;
-        wait = new WebDriverWait(webDriver,Long.parseLong("5"));
+        wait = new WebDriverWait(webDriver,Long.parseLong("15"));
     }
 
     public void clickDeleteProduct()
