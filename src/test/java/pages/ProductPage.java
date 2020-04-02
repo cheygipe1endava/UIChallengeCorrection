@@ -20,8 +20,8 @@ public class ProductPage extends BasePage
     private By productsCatalog = By.id("testId-searchResults-products");
     private By priceButton = By.id("testId-Accordion-Precio");
     private By applyFilterButton = By.className("jsx-3084763500");
-    private By minPrice = By.xpath("//*[@id='testId-range-from']");
-    private By maxPrice = By.xpath("//*[@id='testId-range-to']");
+    private By minPrice = By.id("testId-range-from");
+    private By maxPrice = By.id("testId-range-to");
     private By disabledApplyFilterButton = By.xpath("//*[@class='jsx-3084763500' and @disabled]");
     private By productPageLoad = By.xpath("//*[@class='jsx-1987097504 main']");
     private By appliedFiltersField = By.xpath("//*[@class='jsx-2293612498 selected-filters']");
