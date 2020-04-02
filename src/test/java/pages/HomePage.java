@@ -47,10 +47,6 @@ public class HomePage extends BasePage{
     public void openLoginFormOverlay()
     {
         webDriver.findElement(loginDiv).click();
-        if(!webDriver.findElement(loginFields).isDisplayed())
-        {
-            webDriver.findElement(loginDiv).click();
-        }
     }
 
     public void EmailInsert()

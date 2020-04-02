@@ -37,13 +37,13 @@ public class RegistrationPage extends BasePage{
     private By saveButton = By.id("boton_Ar");
     private By emptyCellphoneMessage = By.id("mensajeCelVacio");
     private By notMatchingPasswords = By.id("mensajeClave2Incorrecto2");
-    private By findFemaleButton = By.xpath("//*[@id='tipodireccion_0' and @value='female']");
+    private By findFemaleButton = By.xpath("//*[@class='sexo' and text()='Mujer']");
 
     public RegistrationPage(WebDriver webDriver)
     {
         super(webDriver);
         this.webDriver = webDriver;
-        wait = new WebDriverWait(webDriver,Long.parseLong("15"));
+        wait = new WebDriverWait(webDriver,Long.parseLong("5"));
     }
 
     public void processDataTable(DataTable fields)

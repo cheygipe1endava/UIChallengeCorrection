@@ -1,8 +1,10 @@
 package pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.List;
@@ -10,6 +12,7 @@ import java.util.List;
 public class ProductPage extends BasePage
 {
     private boolean verifyProductPageRedirection = false;
+    private ExpectedCondition<Boolean> pageLoadCondition;
     private String firstMatchText, objectNameText;
     private WebDriver webDriver;
     private WebDriverWait wait;
@@ -52,14 +55,15 @@ public class ProductPage extends BasePage
         return verifyProductPageRedirection;
     }
 
+    public boolean apply(WebDriver driver)
+    {
+        return ((JavascriptExecutor)driver).executeScript("return document.readyState").equals("complete");
+    }
+
     public void priceButtonClick()
     {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(priceButton));
+        wait.until(this::apply);
         webDriver.findElement(priceButton).click();
-        if(!webDriver.findElement(minPrice).isDisplayed())
-        {
-            webDriver.findElement(priceButton).click();
-        }
     }
 
     public void priceFilter(String minimumPrice, String maximumPrice)
