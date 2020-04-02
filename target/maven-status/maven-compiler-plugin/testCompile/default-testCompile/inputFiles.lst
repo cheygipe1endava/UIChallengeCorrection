@@ -9,8 +9,8 @@ C:\Users\user\Documents\UI CHALLENGE\UIChallenge\src\test\java\pages\ProductPage
 C:\Users\user\Documents\UI CHALLENGE\UIChallenge\src\test\java\helper\HookHelper.java
 C:\Users\user\Documents\UI CHALLENGE\UIChallenge\src\test\java\steps\RegistrationSteps.java
 C:\Users\user\Documents\UI CHALLENGE\UIChallenge\src\test\java\pages\RegistrationPage.java
-C:\Users\user\Documents\UI CHALLENGE\UIChallenge\src\test\java\entities\Register.java
 C:\Users\user\Documents\UI CHALLENGE\UIChallenge\src\test\java\steps\FilterSteps.java
+C:\Users\user\Documents\UI CHALLENGE\UIChallenge\src\test\java\utils\RegisterUtil.java
 C:\Users\user\Documents\UI CHALLENGE\UIChallenge\src\test\java\steps\LogoutSteps.java
 C:\Users\user\Documents\UI CHALLENGE\UIChallenge\src\test\java\steps\SearchSteps.java
 C:\Users\user\Documents\UI CHALLENGE\UIChallenge\src\test\java\pages\ShoppingBagPage.java
